@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grafikler</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+    
+            .chart-container {
+                display: inline-block;
+                padding: 20px;
+                border: 1px solid #ccc;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Plotly Charts</h1>
+
+        <h2>Fırın Sıcaklık Değerleri</h2>
+        <div class="chart-container">
+            {{ temperature_html | safe }}
+        </div>
+
+        <div class="chart-container">
+            <h1>Fırın Sıcaklık ve Fırın Sıcaklık Set Değerleri Distplotu</h1>
+            <img src="{{ url_for('get_image', filename='1.png') }}" alt="Hazır Resim">
+        </div>
+
+        <div class="chart-container">
+            <h1>Yağ Sıcaklık ve Yağ Set Sıcaklık Distplotu</h1>
+            <img src="{{ url_for('get_image', filename='2.png') }}" alt="Hazır Resim">
+        </div>
+
+
+        <div class="chart-container">
+                <h1>Fırın CP ve Fırın CP Set Değerleri Distplotu</h1>
+                <img src="{{ url_for('get_image', filename='3.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Amonyak Distplotu</h1>
+            <img src="{{ url_for('get_image', filename='4.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Fırın Sıcaklık ve Isıtma Step No Boxplot</h1>
+            <img src="{{ url_for('get_image', filename='5.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Fırın Sıcaklık ve Isıtma Step No hue="Amonyak" Boxplot</h1>
+
+            <img src="{{ url_for('get_image', filename='6.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Fırın Sıcaklık ve Soğutma Step No Boxplot</h1>
+            <img src="{{ url_for('get_image', filename='7.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Fırın Sıcaklık ve Soğutma Step No hue="Amonyak" Boxplot</h1>
+            <img src="{{ url_for('get_image', filename='8.png') }}" alt="Hazır Resim">
+        </div>
+        <div class="chart-container">
+            <h1>Yağ Sıcaklık ve Isıtma Step No Boxplot</h1>
+            <img src="{{ url_for('get_image', filename='9.png') }}" alt="Hazır Resim">
+        </div>
+
+    </body>
+</html>
